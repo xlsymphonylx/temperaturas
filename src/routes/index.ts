@@ -10,7 +10,8 @@ router.post("/temp", (req, res, next) => {
   });
   res.send(newTemp);
 });
-router.post("/", (req, res, next) => {
+
+router.get("/", (req, res, next) => {
   res.send({ msg: "success" });
 });
 export default router;
