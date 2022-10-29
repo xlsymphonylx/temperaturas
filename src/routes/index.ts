@@ -12,8 +12,8 @@ router.post("/temp", (req: Request<Temp>, res, next) => {
   res.send(newTemp);
 });
 
-router.get("/temp", (req: Request<Temp>, res, next) => {
-  const temps = tempService.getAll();
+router.get("/temp", async (req: Request<Temp>, res, next) => {
+  const temps = await tempService.getAll();
   res.send(temps);
 });
 export default router;
