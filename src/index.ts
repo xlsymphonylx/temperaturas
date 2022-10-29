@@ -21,8 +21,6 @@ AppDataSource.initialize()
     console.log(
       "Here you can setup and run express / fastify / any other framework."
     );
-    app.listen(port || 5000, () =>
-      console.log("listening port " + port || 5000)
-    );
+    app.listen(80, '0.0.0.0');
   })
   .catch((error) => console.log(error));

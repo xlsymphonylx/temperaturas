@@ -12,7 +12,8 @@ router.post("/temp", (req: Request<Temp>, res, next) => {
   res.send(newTemp);
 });
 
-router.get("/", (req, res, next) => {
-  res.send({ msg: "success" });
+router.get("/temp", (req: Request<Temp>, res, next) => {
+  const temps = tempService.getAll();
+  res.send(temps);
 });
 export default router;

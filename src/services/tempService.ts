@@ -16,6 +16,10 @@ class TempService {
     });
     return await this.tempRepository.save(newTemp);
   }
+  async getAll() {
+    const temps = await this.tempRepository.find();
+    return temps;
+  }
   async findTemp(id: any) {
     const temps = await this.tempRepository.findOneBy(id);
     return temps;
